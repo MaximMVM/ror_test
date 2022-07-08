@@ -1,0 +1,23 @@
+
+<% if @result.nil? %>
+  <p>Пограйте с сервером в игру «камень, ножницы, бумага»</p>
+  <p>выберите ниже</p>
+<% elsif %>
+ <p> <%= @result %></p>
+<% end %>
+
+<%= form_tag game_path do |f| %>
+
+  <%= radio_button_tag(:unit, "камень") %>
+  <%= label_tag(:user_unit, "Камень") %>
+  <%= radio_button_tag(:unit, "ножницы") %>
+  <%= label_tag(:user_unit, "Ножницы") %>
+  <%= radio_button_tag(:unit, "бумага") %>
+  <%= label_tag(:user_unit, "Бумага") %>
+
+
+      <button>Играть!</button>
+
+<% end %>
+
+
