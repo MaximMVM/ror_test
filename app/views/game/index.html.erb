@@ -1,7 +1,28 @@
+<style>
+#main{
+  margin-top: 12%;
+  margin-left: 35%;
+  margin-right: auto;
+}
+p {
+  font-size: 15pt;
+}
+input{
+  width: 30px;
+  height: 20px;
+}
+button{
+  display: block;
+  font-size: 22pt;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left:12%;
+}
+</style>
 
-
+<div id="main">
 <% if @result.nil? %>
-  <p>Пограйте с сервером в игру «камень, ножницы, бумага»</p>
+  <p id="result">Пограйте с сервером в игру «камень, ножницы, бумага»</p>
   <p>выберите ниже</p>
 <% elsif %>
  <p> <%= @result %></p>
@@ -21,5 +42,8 @@
       <button>Играть!</button>
 
 <% end %>
+</div>
+
+
 
 
